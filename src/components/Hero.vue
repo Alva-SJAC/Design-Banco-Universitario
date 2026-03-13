@@ -26,8 +26,10 @@
 
           <div class="d-flex align-items-center gap-4 mt-4 flex-wrap">
             <div v-for="item in trustItems" :key="item" class="d-flex align-items-center gap-2">
-              <svg width="14" height="14" stroke="#4EC9C2" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
-              <span style="color: rgba(255,255,255,0.7); font-size: 0.8rem;">{{ item }}</span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#49beb7" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <span style="color: rgba(255,255,255,0.9); font-size: 0.9rem; font-weight: 500;">{{ item }}</span>
             </div>
           </div>
         </div>

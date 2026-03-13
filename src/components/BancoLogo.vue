@@ -1,15 +1,10 @@
 <template>
-  <div style="display:flex;align-items:center;gap:0.5rem;text-decoration:none">
-    <div :style="iconWrapStyle">
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
-        <path d="M3 9L12 3L21 9V21H15V15H9V21H3V9Z" fill="white" opacity="0.9"/>
-        <rect x="9" y="15" width="6" height="6" fill="white" opacity="0.6"/>
-      </svg>
-    </div>
-    <div style="line-height:1.1">
-      <div :style="nameStyle">Banco Universitario</div>
-      <div :style="taglineStyle">Tu banco académico</div>
-    </div>
+  <div class="bu-logo-container">
+    <img 
+      :src="logoPath" 
+      alt="Banco Universitario Logo" 
+      :style="logoStyle"
+    >
   </div>
 </template>
 
@@ -20,38 +15,40 @@ module.exports = {
     dark: {
       type: Boolean,
       default: false
+    },
+    footer: {
+      type: Boolean,
+      default: false
     }
   },
   computed: {
-    iconWrapStyle() {
-      return {
-        width: '38px',
-        height: '38px',
-        borderRadius: '10px',
-        background: 'linear-gradient(135deg, #4EC9C2 0%, #1A6B7C 100%)',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        flexShrink: 0
-      };
+    logoPath() {
+      // Usamos el logo oficial del kit de diseño
+      return './src/assets/logo-no-background.png';
     },
-    nameStyle() {
-      return {
-        fontWeight: 700,
-        fontSize: '0.95rem',
-        color: this.dark ? '#ffffff' : '#0f4a58',
-        letterSpacing: '-0.01em'
+    logoStyle() {
+      const styles = {
+        height: this.footer ? '65px' : '48px',
+        width: 'auto',
+        display: 'block',
+        objectFit: 'contain'
       };
-    },
-    taglineStyle() {
-      return {
-        fontWeight: 500,
-        fontSize: '0.62rem',
-        color: this.dark ? 'rgba(255,255,255,0.6)' : '#4EC9C2',
-        letterSpacing: '0.12em',
-        textTransform: 'uppercase'
-      };
+      
+      // Si estamos en un fondo oscuro (dark: true), aplicamos un filtro para que se vea blanco/claro
+      if (this.dark) {
+        styles.filter = 'brightness(0) invert(1)';
+        styles.opacity = '0.9';
+      }
+      
+      return styles;
     }
   }
 };
 </script>
+
+<style scoped>
+.bu-logo-container {
+  display: flex;
+  align-items: center;
+}
+</style>

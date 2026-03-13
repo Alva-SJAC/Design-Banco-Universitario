@@ -683,18 +683,31 @@
 }
 
 .bu-cta-text {
-    font-size: 1rem;
-    color: rgba(255, 255, 255, 0.7);
+    font-size: clamp(0.9rem, 1.2vw, 1.05rem);
+    color: rgba(255, 255, 255, 0.85);
     line-height: 1.7;
     margin-bottom: 2rem;
+}
+
+.bu-cta-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    margin-top: 2rem;
+}
+
+.bu-cta-step {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
 }
 
 .bu-step-num {
     width: 36px;
     height: 36px;
     border-radius: 50%;
-    background: rgba(78, 201, 194, 0.2);
-    border: 1px solid rgba(78, 201, 194, 0.4);
+    background: rgba(73, 190, 183, 0.2);
+    border: 1px solid rgba(73, 190, 183, 0.4);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -702,6 +715,12 @@
     font-size: 0.75rem;
     font-weight: 700;
     flex-shrink: 0;
+}
+
+.bu-step-text {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 500;
 }
 
 .bu-contact-form {

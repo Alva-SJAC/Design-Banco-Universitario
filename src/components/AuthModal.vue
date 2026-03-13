@@ -6,8 +6,10 @@
       <div class="row g-0">
         <div class="col-lg-5 d-none d-lg-block">
           <div class="bu-modal-sidebar">
-            <banco-logo :dark="true"></banco-logo>
-            <div class="mt-5">
+            <div class="mb-4">
+              <banco-logo :dark="true" style="max-width: 180px;"></banco-logo>
+            </div>
+            <div class="mt-4">
               <h3>{{ mode === 'login' ? 'Bienvenido de vuelta' : 'Únete a nosotros' }}</h3>
               <p style="opacity: 0.7;">
                 {{ mode === 'login' 
@@ -148,7 +150,7 @@ module.exports = {
   overflow: hidden; position: relative; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5);
 }
 .bu-modal-sidebar {
-  background: var(--bu-gradient); padding: 3rem; height: 100%; color: white;
+  background: var(--bu-gradient); padding: 3.5rem 2.8rem; height: 100%; color: white;
   display: flex; flex-direction: column;
 }
 .bu-modal-content { padding: 3rem; }
