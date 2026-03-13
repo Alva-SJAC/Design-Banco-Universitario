@@ -1,0 +1,19 @@
+/* === Variables globales del Banco Universitario === */
+:root {
+  --bu-teal: #4EC9C2;
+  --bu-teal-dark: #3ab3ac;
+  --bu-navy: #1A6B7C;
+  --bu-navy-deep: #0f4a58;
+  --bu-navy-footer: #0a3540;
+  --bu-white: #ffffff;
+  --bu-offwhite: #F4FAFA;
+  --bu-gray-light: #f0f6f7;
+  --bu-gray: #6c8a90;
+  --bu-text: #1e2d30;
+  --bu-text-muted: #5a7278;
+  --bu-gradient: linear-gradient(135deg, #4EC9C2 0%, #1A6B7C 100%);
+  --bu-gradient-light: linear-gradient(135deg, rgba(78,201,194,0.12) 0%, rgba(26,107,124,0.08) 100%);
+  --bu-radius: 20px;
+  --bu-radius-sm: 12px;
+  --bu-radius-pill: 50px;
+}
