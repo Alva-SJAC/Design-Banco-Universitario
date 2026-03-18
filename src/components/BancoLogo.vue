@@ -1,5 +1,5 @@
 <template>
-  <div class="bu-logo" :class="{ dark }">
+  <div class="bu-logo" :class="{ dark, navbar: isNavbar }">
     <img
       :src="logoSrc"
       alt="Banco Universitario"
@@ -15,14 +15,21 @@ module.exports = {
     dark: {
       type: Boolean,
       default: false
+    },
+    isNavbar: {
+      type: Boolean,
+      default: false
     }
   },
   computed: {
     logoSrc() {
-      const fileName = this.dark ? 'logo-no-background.png' : 'logo-color.png';
-      // Resolve paths relative to the current page so the logo loads correctly
-      // even when the app is served from a subdirectory.
-      return new URL(`src/assets/${fileName}`, window.location.href).href;
+      if (this.isNavbar) {
+        return './Diseno/logo-no-background.png';
+      }
+
+      return this.dark
+        ? './Diseno/logo-no-background.png'
+        : './Diseno/logo-color.png';
     }
   }
 };
@@ -36,16 +43,27 @@ module.exports = {
 
 .bu-logo-img {
   display: block;
-  height: 42px;
+  height: 60px;
   width: auto;
-  max-width: 220px;
+  max-width: 300px;
   object-fit: contain;
+}
+
+/* solo navbar */
+.bu-logo.navbar .bu-logo-img {
+  height: 42px;
+  max-width: 220px;
 }
 
 @media (max-width: 768px) {
   .bu-logo-img {
-    height: 36px;
-    max-width: 190px;
+    height: 40px;
+    max-width: 220px;
+  }
+
+  .bu-logo.navbar .bu-logo-img {
+    height: 40px;
+    max-width: 200px;
   }
 }
 </style>

@@ -1,3 +1,10 @@
+@font-face {
+  font-family: 'Montserrat Alternates Local';
+  src: url('../assets/montserrat-regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
 /* === Variables globales del Banco Universitario === */
 :root {
   --bu-primary: #085f63;

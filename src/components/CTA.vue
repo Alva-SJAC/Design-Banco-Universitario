@@ -5,12 +5,12 @@
         <div class="row align-items-center gy-5">
           <div class="col-lg-7">
             <h2 class="bu-cta-title">Abre tu cuenta <span>100% digital</span> hoy mismo</h2>
-            <p class="mb-4">Sin filas, sin papeleo excesivo. Solo tu carnet universitario y muchas ganas de crecer.</p>
+            <p class="bu-cta-text mb-4">Sin filas, sin papeleo excesivo. Solo tu carnet universitario y muchas ganas de crecer.</p>
             
             <div class="bu-cta-steps">
               <div v-for="step in steps" :key="step.step" class="bu-cta-step">
-                <div class="step-num">{{ step.step }}</div>
-                <div class="step-text">{{ step.text }}</div>
+                <div class="bu-step-num">{{ step.step }}</div>
+                <div class="bu-step-text">{{ step.text }}</div>
               </div>
             </div>
 

@@ -2,7 +2,7 @@
   <nav class="bu-navbar navbar navbar-expand-lg" :class="{ scrolled }">
     <div class="container">
       <a class="navbar-brand bu-navbar-brand" href="#inicio">
-        <banco-logo></banco-logo>
+        <banco-logo :is-navbar="true"></banco-logo>
       </a>
 
       <div class="collapse navbar-collapse d-none d-lg-flex">
@@ -86,7 +86,7 @@ module.exports = {
   name: 'Navbar',
   components: {
     'banco-logo': Vue.defineAsyncComponent(() =>
-      loadModule('./src/assets/logo-no-background.pn', window.loaderOptions)
+      loadModule('./src/components/BancoLogo.vue', window.loaderOptions)
     )
   },
   data() {
@@ -118,6 +118,21 @@ module.exports = {
 <style scoped>
 .bu-navbar-brand {
   text-decoration: none;
+  display: flex;
+  align-items: center;
+  padding: 0;
+  margin-right: 1.5rem;
+  min-height: auto;
+}
+
+.bu-navbar {
+  padding-top: 0.75rem !important;
+  padding-bottom: 0.75rem !important;
+}
+
+.bu-navbar.scrolled {
+  padding-top: 0.55rem !important;
+  padding-bottom: 0.55rem !important;
 }
 
 .bu-menu-btn {
