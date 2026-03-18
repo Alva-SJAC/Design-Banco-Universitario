@@ -1,18 +1,24 @@
 /* === Variables globales del Banco Universitario === */
 :root {
-  --bu-teal: #4EC9C2;
-  --bu-teal-dark: #3ab3ac;
-  --bu-navy: #1A6B7C;
-  --bu-navy-deep: #0f4a58;
-  --bu-navy-footer: #0a3540;
+  --bu-primary: #085f63;
+  --bu-secondary: #49beb7;
+  --bu-accent: #49beb7;
   --bu-white: #ffffff;
-  --bu-offwhite: #F4FAFA;
+
+  --bu-teal: #49beb7;
+  --bu-teal-dark: #3da9a3;
+  --bu-navy: #085f63;
+  --bu-navy-deep: #074c50;
+  --bu-navy-footer: #063f43;
+  --bu-offwhite: #f8fbfb;
   --bu-gray-light: #f0f6f7;
   --bu-gray: #6c8a90;
   --bu-text: #1e2d30;
   --bu-text-muted: #5a7278;
-  --bu-gradient: linear-gradient(135deg, #4EC9C2 0%, #1A6B7C 100%);
-  --bu-gradient-light: linear-gradient(135deg, rgba(78,201,194,0.12) 0%, rgba(26,107,124,0.08) 100%);
+
+  --bu-gradient: linear-gradient(135deg, #49beb7 0%, #085f63 100%);
+  --bu-gradient-light: linear-gradient(135deg, rgba(73,190,183,0.12) 0%, rgba(8,95,99,0.08) 100%);
+
   --bu-radius: 20px;
   --bu-radius-sm: 12px;
   --bu-radius-pill: 50px;
